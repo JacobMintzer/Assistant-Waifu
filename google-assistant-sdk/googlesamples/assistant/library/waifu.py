@@ -129,7 +129,7 @@ def main():
 
 	device_model_id = data["device-model-id"] or device_model_id
 
-	device-config=os.path.join(os.path.expanduser('~/.config'),'googlesamples-assistant','device_config_library.json')
+	deviceConfig=os.path.join(os.path.expanduser('~/.config'),'googlesamples-assistant','device_config_library.json')
 	with Assistant(credentials, device_model_id) as assistant:
 		events = assistant.start()
 		print("events is of type "+str(type(events)))
@@ -142,9 +142,9 @@ def main():
 			if data['project-id']:
 				register_device(data['project-id'], credentials,
 								device_model_id, device_id)
-				pathlib.Path(os.path.dirname(device-config)).mkdir(
+				pathlib.Path(os.path.dirname(deviceConfig)).mkdir(
 					exist_ok=True)
-				with open(device-config, 'w') as f:
+				with open(deviceConfig, 'w') as f:
 					json.dump({
 						'last_device_id': device_id,
 						'model_id': device_model_id,
