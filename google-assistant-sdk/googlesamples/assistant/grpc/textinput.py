@@ -187,7 +187,7 @@ def main(api_endpoint, credentials,
                 system_browser = browser_helpers.system_browser
                 system_browser.display(response_html)
             if response_text:
-                click.echo('<@assistant> %s' % response_text)
+                click.echo('<@Holo the Wise Wolf> %s' % response_text)
 
 
 if __name__ == '__main__':
